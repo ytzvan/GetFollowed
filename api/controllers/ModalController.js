@@ -1,5 +1,5 @@
 /**
- * CommentController
+ * ModalController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -28,25 +28,62 @@ module.exports = {
   
   /**
    * Action blueprints:
-   *    `/comment/create`
+   *    `/modal/photo`
    */
-   create: function (req, res) {
+   photo: function (req, res) {
     
-    // Send a JSON response
     T.get('followers/ids', { screen_name: 'rolilink' },  function (err, data, response) {
         console.log(data);
         console.log(err);
         return res.json(data);
     })
-    
   },
 
 
   /**
    * Action blueprints:
-   *    `/comment/destroy`
+   *    `/modal/name`
    */
-   destroy: function (req, res) {
+   name: function (req, res) {
+    
+    // Send a JSON response
+    return res.json({
+      hello: 'world'
+    });
+  },
+
+
+  /**
+   * Action blueprints:
+   *    `/modal/username`
+   */
+   username: function (req, res) {
+    
+    // Send a JSON response
+    return res.json({
+      hello: 'world'
+    });
+  },
+
+
+  /**
+   * Action blueprints:
+   *    `/modal/bio`
+   */
+   bio: function (req, res) {
+    
+    // Send a JSON response
+    return res.json({
+      hello: 'world'
+    });
+  },
+
+
+  /**
+   * Action blueprints:
+   *    `/modal/follow`
+   */
+   follow: function (req, res) {
     
     // Send a JSON response
     return res.json({
@@ -59,7 +96,7 @@ module.exports = {
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to CommentController)
+   * (specific to ModalController)
    */
   _config: {}
 
