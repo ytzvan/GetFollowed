@@ -1,0 +1,2 @@
+# getFollowed
+### a Sails application
